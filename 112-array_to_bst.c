@@ -27,7 +27,7 @@ bst_t *array_to_bst(int *array, size_t size)
 	bst_t *root = NULL;
 	size_t i;
 
-	if (!array || size == 0)
+	if (!array)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
@@ -42,4 +42,3 @@ bst_t *array_to_bst(int *array, size_t size)
 
 	return (root);
 }
-
