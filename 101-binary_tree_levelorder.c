@@ -10,11 +10,11 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
 	binary_tree_t **queue;
 	const binary_tree_t *current;
-	int front = 0, rear =0;
+	int front = 0, rear = 0;
 
 	if (!tree || !func)
 		return;
-	
+
 	queue = malloc(sizeof(binary_tree_t *) * 1024);
 	if (!queue)
 		return;
