@@ -7,26 +7,26 @@ avl_t *avl_insert_recursive(avl_t **tree, avl_t *parent,
 avl_t *avl_insert(avl_t **tree, int value);
 
 /**
- * binary_tree_height - Measures the height of a binary tree
+ * height - Measures the height of a binary tree
  * @tree: Pointer to the root node of the tree
  * Return: The height of the tree, otherwise 0 if tree is NULL
  **/
 
 size_t height(const binary_tree_t *tree)
 {
-	size_t left_height, right_height;
+	size_t left_height = 0, right_height = 0;
 
 	if (!tree)
 		return (0);
 
-	left_height = tree->left ? height(tree->left) : 1;
-	right_height = tree->right ? height(tree->right) : 1;
+	left_height = tree->left ? binary_tree_height(tree->left) : 1;
+	right_height = tree->right ? binary_tree_height(tree->right) : 1;
 	return ((left_height > right_height) ? left_height : right_height);
 }
 
 
 /**
- * binary_tree_balance - Measures the balance factor of a tree
+ * balance - Measures the balance factor of a tree
  * @tree: Pointer to the root node
  * Return: The integer factor, 0 if tree is NULL
  **/
