@@ -6,6 +6,7 @@
 #include <string.h>
 #include <limits.h>
 #include <stdbool.h>
+#include <stddef.h>
 
 /**BINARY TREE DATA STRUCTURES**/
 
